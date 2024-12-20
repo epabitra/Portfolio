@@ -1,8 +1,3 @@
-var email_ = "epabitra9@gmail.com";
-var mobileNo = "7377618313";
-var address = "Ganjam, Odisha, India";
-var logo_name = "BASU";
-var comp_desc = "My goal is to grow as a Java Developer. I hope you will consider my candidacy for a role at your prestigious company. Thank you.";
 var main_header_title = "Java Developer";
 var main_header_text = "I'm E Pabitra, a Java Developer specializing in Web Development";
 var main_header_content = "I Design and Develop Experiences that make people's Lives simple. I break one big impossible task into several small possible tasks.";
@@ -43,13 +38,6 @@ const latestProjects = [
         description:
           "It is a web application used to demonstrate the Employee Management System. You can find the description on GitHub."
     },
-    // {
-    //   gitHubLink: "Maintanance.html",
-    //   projName: "BASU Chat",
-    //   projType: "Java Application",
-    //   description:
-    //     "It is a web application used to demonstrate the Messaging Application Development. You can find the description on GitHub."
-    // },
     {
         gitHubLink: "https://github.com/epabitra/HK-Payments-Bank.git",
         projName: "HK Payments Bank",
@@ -60,16 +48,13 @@ const latestProjects = [
 ];
 
 function initializeAllDynamicFields() {
-    setMobileNo();
-    setEmailId();
-    setAddress();
-    setCompDesc();
-    setLogoName();
     setMainHeaderTitle();
     setMainHeader();
     setMainHeaderContent();
     generateProjectContent(latestProjects);
 }
+
+initializeAllDynamicFields();
   
 // Step 2: Prepare Method to Generate HTML
 function generateProjectContent(projectArray) {
@@ -95,54 +80,6 @@ function generateProjectContent(projectArray) {
     });
 }
 
-function setMobileNo() {
-    const mobileNoElements = document.querySelectorAll(".mobile_no");
-
-    mobileNoElements.forEach((element) => {
-        const anchorTag = document.createElement("a");
-        anchorTag.href = `tel:${mobileNo}`;
-        anchorTag.innerHTML = `(+91) ${mobileNo}`;
-
-        element.appendChild(anchorTag);
-    });
-}
-
-function setEmailId() {
-    const emailIdElements = document.querySelectorAll(".email_id");
-
-    emailIdElements.forEach((element) => {
-        const anchorTag = document.createElement("a");
-        anchorTag.href = `mailto:${email_}`;
-        anchorTag.innerHTML = `${email_}`;
-
-        element.appendChild(anchorTag);
-    });
-}
-
-function setAddress() {
-    const addressElements = document.querySelectorAll(".address");
-
-    addressElements.forEach((element) => {
-        element.innerHTML = `${address}`;
-    });
-}
-
-function setCompDesc() {
-    const addressElements = document.querySelectorAll(".comp-desc");
-
-    addressElements.forEach((element) => {
-        element.innerHTML = `${comp_desc}`;
-    });
-}
-
-function setLogoName() {
-    const addressElements = document.querySelectorAll(".logo-name");
-
-    addressElements.forEach((element) => {
-        element.innerHTML = `${logo_name}`;
-    });
-}
-
 function setMainHeaderTitle() {
     const addressElements = document.querySelectorAll(".main-header-title");
 
@@ -152,6 +89,7 @@ function setMainHeaderTitle() {
 }
 
 function setMainHeader() {
+    console.log("setMainHeader called...");
     const addressElements = document.querySelectorAll(".main-header-text");
 
     addressElements.forEach((element) => {
