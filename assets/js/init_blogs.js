@@ -19,7 +19,7 @@ const blogCards = [
         authorName: "E Pabitra",
         date: "4 May, 2023",
         header: "Started a new position as Graduate Trainee Engineer at Vidyayug Pvt.Ltd",
-        blogURL: "about.html",
+        blogURL: "javascript:void(0);",
       },
 ];
 
